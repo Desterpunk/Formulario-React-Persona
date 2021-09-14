@@ -1,10 +1,12 @@
 import React,{useState,Fragment} from 'react';
 import {useForm} from "react-hook-form";
+import TablaUsuarios from './TablaUsuarios';
+import TablaUsuari from './TablaUsuarios';
 
 const Usuario = () => {
-    const{register,handleSubmit,watch,formState:{errors}}=useForm();
+    const{register,handleSubmit,formState:{errors}}=useForm();
     const[listaDeUsuarios, setListaDeUSuarios] = useState([])
-    const enviar = (usuario,setUser) => {
+    const enviar = (usuario) => {
         let usuarioNuevo = {
             nombre: usuario.nombre,
             edad:usuario.edad,
@@ -70,6 +72,7 @@ const Usuario = () => {
                         <button className="btn btn-primary" type="submit">Enviar</button>
                     </div>
                 </form>
+                <TablaUsuarios usuarios={listaDeUsuarios}/>
             </Fragment>
         </div>
      );
