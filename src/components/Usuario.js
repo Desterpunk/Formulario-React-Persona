@@ -1,7 +1,6 @@
 import React,{useState,Fragment} from 'react';
 import {useForm} from "react-hook-form";
 import TablaUsuarios from './TablaUsuarios';
-import TablaUsuari from './TablaUsuarios';
 
 const Usuario = () => {
     const{register,handleSubmit,formState:{errors}}=useForm();
